@@ -1413,10 +1413,10 @@ section#contant h4 {
 }
  .post-info img {
      float: left;
-     width: 80px;
-     border-radius: 100%;
-     box-shadow: none;
-     border: solid #ccc 3px;
+     width: 80% !important; 
+     /* border-radius: 100%; */
+     /* box-shadow: none;
+     border: solid #ccc 3px; */
 }
  .post-info span {
      float: left;
@@ -1471,8 +1471,8 @@ body section#contant .post-info span h4 {
      float: left;
      background: #d8302f;
      color: #fff;
-     padding: 10px 20px;
-     font-size: 15px;
+     /* padding: 10px 20px; */
+     font-size: 10px;
      border-radius: 50px;
      margin-top: 5px;
      font-weight:500;
@@ -2029,4 +2029,7 @@ body section#contant .post-info span h4 {
          box-shadow: 0 0 100px -80px rgba(0,0,0,0.8);
          min-height: auto;
     }
+}
+.h3{
+    font-size:16px !important;
 }

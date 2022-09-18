@@ -6,6 +6,7 @@ const feedSchema = new Schema({
   text: { type: String, required: true },
   feedUrl: { type: String},
   expertLevel: { type: String},
+  feedLogo: { type: String},
   
 })
   
