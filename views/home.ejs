@@ -5,6 +5,8 @@
  <!--START HEAD -->
  <%- include('partials/head'); %>
  <!--END HEAD -->
+ <script src="/node_modules/rss-parser/dist/rss-parser.min.js"></script>
+
    </head>
    <body class="game_info" data-spy="scroll" data-target=".header">
       <!-- LOADER -->
@@ -66,66 +68,48 @@
                      <div class="col-md-12">
                         <div class="feature-cont">
                            <div class="post-info">
-                              
-                              <% if (feeds.length > 0) { %>
-                                 <% feeds.forEach(f => {%>
-                                   
-                                    <span><h4 class="title" > <img src="<%= f.feedLogo %>" alt="#" style="width:30%" /></h4>
-                                    </span>
-                                    
-                                    
-                                    <p id = "feed-article"></p>
-                                       <br/></br>
-                                          <script>
-                                          alert("in script");
-                                           const url = '/getfeeds/<%= f._id %>';
-                                           $.ajax({
-                                                      url: url,
-                                                      type : "GET",
-                                                      data: { },
-                                                      success : function(rss) {
-                                                      //   Set up url
-                                                      
-                                                      var currentHTML = $("#feed-article").val();
-                                                      
-                                                         rss.items.forEach(item => {
-                                                            let articleUrl="<div class='post-heading'>"+
-                                                               "</div>"+
-                                                               "<h3>"+item.title+"</h3>"+
-                                                                 "<i>"+item.pubDate.substring(0, item.pubDate.length-6)+"</i></br>"+
-                                                               // "<p>"+item.contentSnippet+"</p><br/>"+
-                                                                  
-                                                               
-                                                               "<div class='full'><a  target='_blank' href="+item.link+"><button type='button' class='btn btn-success'>Read More</button></a><br/><br/>"
-                                                            
-                                                            
+                              <% for (var i=0; i< feeds.length; i++) { %>
+                                 <%= feeds[i] %>
+                                 <script>
+                                    // PARSE FILE HERE
+                                 //    $.ajax({
+                                 //               url: '<%= feeds[i] %>',
+                                 //               type : "GET",
+                                 //               data: { },
+                                 //               success : function(rss) {
+                                 //               //   Set up url
 
-                                                            currentHTML+=articleUrl;
-                                                         });
-                                                         
-                                                         
-                                                         $("#feed-article").html(currentHTML);
-                                                         
-                                                         
-                                                         
-                                                         
-                                                      },
-                                                      error : function(e) {
-                                                         console.error(`${e.name}: ${e.message}`);
-                                                         alert("error"+error)
-                                                      }
-                                                   
-                                          });
-                                          </script>
-                                          </br>
-                                         
+                                               
+                                             
+                                                  
+                                 //               },
+                                 //               error : function(e) {
+                                 //                  console.error(`${e.name}: ${e.message}`);
+                                 //                  alert("error"+error)
+                                 //               }
+                                            
+                                 //   }); 
 
-                                       </p>
-                                 <% }) %>
-                                 <% }else { %>
-                                       <p>There are no articles available today...</p>
-                                 <% } %>
-                              
+                                 // Note: some RSS feeds can't be loaded in the browser due to CORS security.
+                                 // To get around this, you can use a proxy.
+                                 // const Parser = require('rss-parser');
+                                 // let parser = new Parser();
+                                 // const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
+
+                                 
+                                 // parser.parseURL('https://www.reddit.com/.rss', function(err, feed) {
+                                 // if (err) throw err;
+                                 // console.log(feed.title);
+                                 // feed.items.forEach(function(entry) {
+                                 //    console.log(entry.title + ':' + entry.link);
+                                 // })
+                                 // })
+
+
+                                 </script>
+                                
+                              <%}%>
+                             
                               
                            </div>
                            
@@ -204,9 +188,9 @@
       <!-- ALL PLUGINS -->
       <script src="js/custom.js"></script>
    </body>
-   <script>
+   <!-- <script>
    $(function() {
       // Handler for .ready() called.
     });
-   </script>
+   </script> -->
 </html>
