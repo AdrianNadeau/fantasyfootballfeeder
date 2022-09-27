@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + "/public"));
 
- app.listen(process.env.port || 3000);
+ 
 
 app.use((req, res,next)=>{
    res.status(404).send('<h1> Page not found </h1>');
@@ -41,6 +41,7 @@ app.use((req, res,next)=>{
   })
   .catch((error) => console.error(error));
  
+  app.listen(process.env.port || 3000);
 console.log('Running at Port 3000');
 console.log("=================================================");
 
