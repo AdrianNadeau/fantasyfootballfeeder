@@ -6,6 +6,8 @@ const path = require('path');
 const route = express.Router();
 const mongoose = require('mongoose');
 
+require('dotenv').config();
+
 const hostname = '127.0.0.1';
 const port = 3000;
 //add the router
@@ -28,18 +30,16 @@ app.use(express.static(__dirname + "/public"));
 app.use((req, res,next)=>{
    res.status(404).send('<h1> Page not found </h1>');
 });
- //Mongo Connection
-//  mongoose.connect('mongodb://127.0.0.1:27017/');
+ //Mongoose Connection
 
-mongoose
-  .connect('mongodb://localhost:27017/fantasyfootball-dev', {
+  mongoose
+  .connect(process.env.CONNECTION_URL, {
    //  useNewUrlParser: true,
    //  connectWithNoPrimary: true,
    //  useUnifiedTopology: true,
    //  useCreateIndex: true,
   })
   .catch((error) => console.error(error));
-
  
 console.log('Running at Port 3000');
 console.log("=================================================");

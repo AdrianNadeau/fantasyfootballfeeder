@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const feedSchema = new Schema({
   title: { type: String, required: true },
-  description: { type: String},
-  link: {type: String},
+  text: { type: String, required: true },
   feedUrl: { type: String},
-  feedLogo: { type: String},  
+  feedLogo: { type: String},
+  
 })
   
 
