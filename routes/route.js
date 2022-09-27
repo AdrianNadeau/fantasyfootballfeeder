@@ -17,6 +17,7 @@ router.get('/ping', function(req, res, next) {
 });
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  console.log("****************************** LOAD INDEX **************************")
     res.render('index');
 });
 /* GET feeds page. */
