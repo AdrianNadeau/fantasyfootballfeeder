@@ -68,8 +68,13 @@
                            
                               
                               <% if (feeds.length > 0) { %>
+                                 <script>
+                                    alert(feeds.length);
+                                 </script>
                                  <% feeds.forEach(f => {%>
-
+                                    <script>
+                                       alert(f);
+                                    </script>
                                     <div class="post-info">
                                    
                                     <div class="post-header">
@@ -89,7 +94,7 @@
                                                       type : "GET",
                                                       data: { },
                                                       success : function(rss) {
-                                                      alert(rss);
+                                                      
 
                                                       
                                                       var currentHTML = $("#<%= f._id %>").val();
