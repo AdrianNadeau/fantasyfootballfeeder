@@ -1124,7 +1124,7 @@ section#contant h4 {
 }
  .main-heading {
      display: inline-block;
-     text-align: center;
+     text-align: left;
      width: 100%;
      margin-bottom: 35px;
 }

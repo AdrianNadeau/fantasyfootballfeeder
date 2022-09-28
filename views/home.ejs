@@ -93,7 +93,7 @@
 
                                                       
                                                       var currentHTML = $("#<%= f._id %>").val();
-                                                      
+                                                      console.log(rss)
                                                          rss.forEach(item => {
                                                             let articleUrl=`<div class="post">
                                                                      <h3 class="post-title"> ${item.title} </h3>
@@ -144,13 +144,9 @@
          </div>
          
       </section>
-      
-           
-      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-      <!-- ALL JS FILES -->
-      <script src="js/all.js"></script>
-      <!-- ALL PLUGINS -->
-      <script src="js/custom.js"></script>
+            <!--START FOOTER -->
+  <%- include('partials/footer'); %>
+  <!--END FOOTER -->
    </body>
    <script>
    $(function() {

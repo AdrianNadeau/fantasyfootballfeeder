@@ -13,41 +13,14 @@
       </div> -->
       <!-- END LOADER -->
       <section id="top">
-         <header>
-            <div class="container">
-               <div class="header-top">
-                  <!-- <div class="row">
-                     <div class="col-md-6">
-                        <div class="full">
-                           <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-6">
-                        <div class="right_top_section">
-                           
-                           <ul class="login">
-                              <li class="login-modal">
-                                 <a href="/" class="login"><i class="fa fa-user"></i>Logout</a>
-                              </li>
-                              
-                           </ul>
-                           
-                        </div>
-                     </div>
-                  </div>-->
-               </div>
-               
-            </div>
-         </header>
+         
          <div class="inner-page-banner">
             <div class="container">
             </div>
          </div>
          <div class="inner-information-text">
             <div class="container">
-               <h3>ESPN</h3>
+               <h3><%=feedTitle%> - News and Tips</h3>
                
             </div>
          </div>
@@ -64,67 +37,64 @@
                         </div>
                      </div> -->
                      <div class="col-md-12">
-                        <div class="feature-cont">
-                           <div class="feeds" id = "<%=feedId%>"></div>
-                           <br/></br>
-                              <script>
+                        <div class="feature-cont" style=" display: block !important;">
+                           <div class="post-info">
+                                    <div class="feeds" id = "<%= feedId %>" ></div>
+                                       <br/></br>
+                                    <script>
+                                          
+                                       $.ajax({
+                                                  url: '/getallfeeds/<%=feedId %>',
+                                                  type : "GET",
+                                                  data: { },
+                                                  success : function(rss) {
+                                                  //   Set up url
+         
+                                                  
+                                                   var currentHTML = $("#<%=feedId %>").val();
+                                                      
+                                                      const rssArray = [rss];
+                                                      console.log(rssArray);
+                                                      rssArray[0]?.forEach(element => {
+                                                         let articleUrl="<div class='post-heading'>"+
+                                                               "</div>"+
+                                                               "<a  target='_blank' href="+element.link+"><h3>"+element.title+"</h3></a>"+
+                                                                 "<i>"+element.pubDate.substring(0, element.pubDate.length-6)+"</i>"+
+                                                                  "<div class='full'><a  target='_blank' href="+element.link+"<button type='button' class='btn btn-success'>Read More</button></a><br/><br/>";
+                                                                 currentHTML+=articleUrl;
+                                                      });
+                                                      
+                                                      $("#<%=feedId%>").html(currentHTML);
+                                                   
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                  },
+                                                  error : function(e) {
+                                                     console.log(`${e.name}: ${e.message}`);
+                                                     
+                                                  }
+                                               
+                                      });
+                                      </script>
+                                
                               
-                               $.ajax({
-                                          url: '/getallfeeds/<%=feedId%>/',
-                                          type : "GET",
-                                          data: { },
-                                          success : function(rss) {
-                                          //   Set up url
-
-                                          
-                                          var currentHTML = $("#<%=feedId%>").val();
-                                          
-                                             rss.forEach(item => {
-                                                let articleUrl=`<div class="post">
-                                                         <h3 class="post-title"> ${item.title} </h3>
-                                                         <span class="post-date"> 
-                                                            ${item.pubDate.substring(0, item.pubDate.length-7)}
-                                                         </span>
-                                                         <a  target="_blank" href="${item.link}"><button type="button" class="btn btn-success">Read More</button></a> </div>`
-                                                
-                                                
-
-                                                currentHTML+=articleUrl;
-                                             });
-
-                                             
-                                             $("#<%=feedId%>").html(currentHTML);
-                                             
-                                             
-                                             
-                                             
-                                          },
-                                          error : function(e) {
-                                             
-                                             console.log("error");
-                                             
-                                          }
-                                       
-                              });
-                              </script>
-                              </br>
-                             
-
-                           </p>
+                              
+                           </div>
+                           
                         </div>
+                     </div>
+                  </div>
                  
                </div>
             </div>
          </div>
-         
       </section>
-      
-           
-      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-      <!-- ALL JS FILES -->
-      <script src="js/all.js"></script>
-      <!-- ALL PLUGINS -->
-      <script src="js/custom.js"></script>
+         <!--START FOOTER -->
+  <%- include('partials/footer'); %>
+  <!--END FOOTER -->
    </body>
    <script>
    $(function() {
