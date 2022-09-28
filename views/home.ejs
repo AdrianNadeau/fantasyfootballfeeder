@@ -93,7 +93,7 @@
 
                                                       
                                                       var currentHTML = $("#<%= f._id %>").val();
-                                                      console.log(rss)
+                                                      alert(rss);
                                                          rss.forEach(item => {
                                                             let articleUrl=`<div class="post">
                                                                      <h3 class="post-title"> ${item.title} </h3>
@@ -115,7 +115,7 @@
                                                          
                                                       },
                                                       error : function(e) {
-                                                         alert("error"+e.message);
+                                                         console.log("error"+e.message);
                                                          
                                                          
                                                       }
