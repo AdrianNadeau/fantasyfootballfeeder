@@ -68,13 +68,9 @@
                            
                               
                               <% if (feeds.length > 0) { %>
-                                 <script>
-                                    alert(feeds.length);
-                                 </script>
+                                 
                                  <% feeds.forEach(f => {%>
-                                    <script>
-                                       alert(f);
-                                    </script>
+                                    
                                     <div class="post-info">
                                    
                                     <div class="post-header">
@@ -87,46 +83,16 @@
                                     
                                     <div class="feeds" id = "<%= f._id %>"></div>
                                        <br/></br>
-                                          <script>
-                                          
-                                           $.ajax({
-                                                      url: '/getfeeds/<%= f._id %>/',
-                                                      type : "GET",
-                                                      data: { },
-                                                      success : function(rss) {
-                                                      
-
-                                                      
-                                                      var currentHTML = $("#<%= f._id %>").val();
-                                                      alert(rss);
-                                                         rss.forEach(item => {
-                                                            let articleUrl=`<div class="post">
-                                                                     <h3 class="post-title"> ${item.title} </h3>
-                                                                     <span class="post-date"> 
-                                                                        ${item.pubDate.substring(0, item.pubDate.length-7)}
-                                                                     </span>
-                                                                     <a  target="_blank" href="${item.link}"><button type="button" class="btn btn-success">Read More</button></a> </div>`
-                                                            
-                                                            
-
-                                                            currentHTML+=articleUrl;
-                                                         });
-
-                                                         
-                                                         $("#<%= f._id %>").html(currentHTML);
-                                                         
-                                                         
-                                                         
-                                                         
-                                                      },
-                                                      error : function(e) {
-                                                         console.log("error"+e.message);
-                                                         
-                                                         
-                                                      }
-                                                   
-                                          });
-                                          </script>
+                                       <script>
+                                          $.ajax({
+                                             method: "GET",
+                                             url: "/getfeeds/<%= f._id %>/",
+                                             data: { }
+                                          })
+                                          .done(function( msg ) {
+                                                alert( "Data Returned: " + msg );
+                                       });
+                                       </script>
                                           </br>
                                          
 
