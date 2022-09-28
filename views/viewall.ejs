@@ -41,44 +41,29 @@
                            <div class="post-info">
                                     <div class="feeds" id = "<%= feedId %>" ></div>
                                        <br/></br>
-                                    <script>
-                                       
-                                       $.ajax({
-                                                  url: '/getallfeeds/<%=feedId %>',
-                                                  type : "GET",
-                                                  data: { },
-                                                  success : function(rss) {
-                                                   alert(rss);
-         
-                                                  
-                                                   var currentHTML = $("#<%=feedId %>").val();
-                                                      
-                                                      const rssArray = [rss];
-                                                      console.log(rssArray);
-                                                      rssArray[0]?.forEach(element => {
-                                                         let articleUrl="<div class='post-heading'>"+
-                                                               "</div>"+
-                                                               "<a  target='_blank' href="+element.link+"><h3>"+element.title+"</h3></a>"+
-                                                                 "<i>"+element.pubDate.substring(0, element.pubDate.length-6)+"</i>"+
-                                                                  "<div class='full'><a  target='_blank' href="+element.link+"<button type='button' class='btn btn-success'>Read More</button></a><br/><br/>";
-                                                                 currentHTML+=articleUrl;
-                                                      });
-                                                      
-                                                      $("#<%=feedId%>").html(currentHTML);
-                                                   
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                  },
-                                                  error : function(e) {
-                                                   console.log("error"+e.message);
-                                                     
-                                                  }
-                                               
-                                      });
-                                      </script>
+                                       <script>
+                                          $.ajax({
+                                             method: "GET",
+                                             url: "/getallfeeds/<%=feedId %>/",
+                                             data: { }
+                                          })
+                                          .done(function( rss ) {
+                                                console.log(rss);
+                                                var currentHTML = $("#<%=feedId %>").val();
+                                                const rssArray = [rss];
+                                                
+                                                rssArray[0]?.forEach(element => {
+                                                   let articleUrl="<div class='post-heading'>"+
+                                                   "</div>"+
+                                                   "<a  target='_blank' href="+element.link+"><h3>"+element.title+"</h3></a>"+
+                                                   "<i>"+element.pubDate.substring(0, element.pubDate.length-6)+"</i>"+
+                                                   "<div class='full'><a  target='_blank' href="+element.link+"<button type='button' class='btn btn-success'>Read More</button></a><br/><br/>";
+                                                   currentHTML+=articleUrl;
+                                                });
+                                                $("#<%=feedId%>").html(currentHTML);
+                                          });
+                                          
+                                       </script>
                                 
                               
                               

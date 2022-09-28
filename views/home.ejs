@@ -89,8 +89,27 @@
                                              url: "/getfeeds/<%= f._id %>/",
                                              data: { }
                                           })
-                                          .done(function( msg ) {
-                                                alert( "Data Returned: " + msg );
+                                          .done(function( rss ) {
+                                             console.log(rss);
+                                              var currentHTML = $("#<%= f._id %>").val();
+                                                      
+                                                         rss.forEach(item => {
+                                                            let articleUrl=`<div class="post">
+                                                                     <h3 class="post-title"> ${item.title} </h3>
+                                                                     <span class="post-date"> 
+                                                                        ${item.pubDate.substring(0, item.pubDate.length-7)}
+                                                                     </span>
+                                                                     <a  target="_blank" href="${item.link}"><button type="button" class="btn btn-success">Read More</button></a> </div>`
+                                                            
+                                                            
+
+                                                            currentHTML+=articleUrl;
+                                                         });
+
+                                                         
+                                                         $("#<%= f._id %>").html(currentHTML);
+                                                         
+                                                      
                                        });
                                        </script>
                                           </br>
