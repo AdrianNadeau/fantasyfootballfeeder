@@ -83,13 +83,13 @@
                                     <div class="feeds" id = "<%= f._id %>"></div>
                                        <br/></br>
                                           <script>
-                                          alert("get articles")   
+                                          
                                            $.ajax({
                                                       url: '/getfeeds/<%= f._id %>/',
                                                       type : "GET",
                                                       data: { },
                                                       success : function(rss) {
-                                                      //   Set up url
+                                                      alert(rss);
 
                                                       
                                                       var currentHTML = $("#<%= f._id %>").val();
