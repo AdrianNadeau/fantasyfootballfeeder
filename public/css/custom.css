@@ -2074,7 +2074,7 @@ NEW CLASSES BY SIRIUS CODZ
 .feeds > .post {
     display: flex;
     flex-direction: column;
-    min-height: 180px;
+    min-height: 120px;
     border-bottom: 1px solid #ccc;
 }
 

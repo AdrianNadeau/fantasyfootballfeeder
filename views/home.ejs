@@ -16,13 +16,13 @@
          <header>
             <div class="container">
                <div class="header-top">
-                  <div class="row">
+                  <!-- <div class="row">
                      <div class="col-md-6">
-                        <!-- <div class="full">
+                        <div class="full">
                            <div class="logo">
                               <a href="index.html"><img src="images/logo.png" alt="#" /></a>
                            </div>
-                        </div> -->
+                        </div>
                      </div>
                      <div class="col-md-6">
                         <div class="right_top_section">
@@ -33,10 +33,10 @@
                               </li>
                               
                            </ul>
-                           <!-- end button section -->
+                           
                         </div>
                      </div>
-                  </div>
+                  </div>-->
                </div>
                
             </div>
@@ -75,7 +75,7 @@
                                     <div class="post-header">
                                        <h4 class="post-header-title" > <%= f.title %></h4>
 
-                                       <button type="button" class="btn btn-success">Read All</button>
+                                       <a href="/viewall/<%= f._id %>/"><button type="button" class="btn btn-success">Read All</button></a>
                                     </div>
                                     
                                     
@@ -85,7 +85,7 @@
                                           <script>
                                           
                                            $.ajax({
-                                                      url: '/getfeeds/<%= f._id %>',
+                                                      url: '/getfeeds/<%= f._id %>/',
                                                       type : "GET",
                                                       data: { },
                                                       success : function(rss) {
@@ -98,7 +98,7 @@
                                                             let articleUrl=`<div class="post">
                                                                      <h3 class="post-title"> ${item.title} </h3>
                                                                      <span class="post-date"> 
-                                                                        ${item.pubDate.substring(0, item.pubDate.length-6)}
+                                                                        ${item.pubDate.substring(0, item.pubDate.length-7)}
                                                                      </span>
                                                                      <a  target="_blank" href="${item.link}"><button type="button" class="btn btn-success">Read More</button></a> </div>`
                                                             

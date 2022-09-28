@@ -35,8 +35,8 @@ router.get('/home', async (req, res) => {
   }
 });
 
-router.get('/getfeeds/:id', async (req, res) => {
- console.log("****************************** GET FEEDS **************************")
+router.get('/getfeeds/:id/', async (req, res) => {
+ 
   try {
     let feed = await Feed.findById(req.params.id)
 
@@ -56,5 +56,41 @@ router.get('/getfeeds/:id', async (req, res) => {
   }
     
 })
+// VIEW ALL ARTICLES FOR A FEED
+router.get('/viewallfeeds/:id/', async (req, res) => {
+ console.log("get all")
+  try {
+    let feed = await Feed.findById(req.params.id)
+
+    if(!feed) {
+      res.status(404).send(`No feeds for ${req.params.id}`)
+      return
+    }
+
+    const feedRSS = await parser.parseURL(feed.feedUrl)
+
+    const feedLimited = feedRSS.items;
+
+    res.send(feedLimited)
+
+  } catch (error) {
+    res.status(500).send(error.message)
+  }
+    
+})
+// VIEW ALL ARTICLES FOR A FEED
+router.get('/viewall/:id/', async (req, res) => {
+  try {
+    console.log("get all for : "+req.params.id);
+    let feedId = req.params.id;
+
+    res.render('viewall', {feedId})
+
+  } catch (error) {
+    console.log(error.message)
+  }
+     
+ })
+ 
 
 module.exports = router;
