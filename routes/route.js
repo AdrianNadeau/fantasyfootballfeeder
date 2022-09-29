@@ -36,7 +36,7 @@ router.get('/home', async (req, res) => {
 });
 
 router.get('/getfeeds/:id/', async (req, res) => {
-  console.log("***************************** GET ONE **************************");
+  console.log("***************************** GET ONE "+req.params.id+"**************************");
   try {
     let feed = await Feed.findById(req.params.id)
 
@@ -59,7 +59,7 @@ router.get('/getfeeds/:id/', async (req, res) => {
 // VIEW ALL ARTICLES FOR A FEED
 router.get('/getallfeeds/:id/', async (req, res) => {
   console.log("get all for : "+req.params.id);
-  console.log("***************************** GET "+req.params.id+"**************************");
+  console.log("***************************** GET ALL "+req.params.id+"**************************");
   try {
     let feed = await Feed.findById(req.params.id)
     
