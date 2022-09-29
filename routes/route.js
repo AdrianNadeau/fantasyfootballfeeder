@@ -36,7 +36,7 @@ router.get('/home', async (req, res) => {
 });
 
 router.get('/getfeeds/:id/', async (req, res) => {
- 
+  console.log("***************************** GET ONE **************************");
   try {
     let feed = await Feed.findById(req.params.id)
 
