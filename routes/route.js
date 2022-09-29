@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/home', async (req, res) => {
-  
+  console.log("***************************** GET HOME **************************");
   try {
     const feeds = await Feed.find()
 
