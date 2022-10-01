@@ -8,8 +8,6 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 
-const hostname = '127.0.0.1';
-const port = 3000;
 //add the router
 const indexRouter = require("./routes/route.js");
 
