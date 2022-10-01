@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "632e22a5af4400e9b04312c7"
+  },
+  "title": "ESPN",
+  "text": "ESPN",
+  "feedUrl": "https://www.espn.com/espn/rss/nfl/news?null",
+  "feedLogo": "https://a.espncdn.com/i/espn/teamlogos/lrg/trans/espn_dotcom_black.gif",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632e22a5af4400e9b04312c5"
+  },
+  "title": "ROTOWIRE",
+  "text": "ROTOWIRE",
+  "feedUrl": "https://rss2.feedspot.com/https://www.rotowire.com/football/articles.php",
+  "feedLogo": "https://content.rotowire.com/images/rotowire-site-logo.svg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632e22a5af4400e9b04312c9"
+  },
+  "title": "Fantasy SP",
+  "text": "Fantasy SP",
+  "feedUrl": "https://www.fantasysp.com/rss/all/fantasysp/",
+  "feedLogo": "images/logos/fantasySP.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632e22a5af4400e9b04312ca"
+  },
+  "title": "Dynasty",
+  "text": "Dynasty",
+  "feedUrl": "https://dynastyleaguefootball.com/feed/",
+  "feedLogo": "images/logos/Dynasty.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632e22a5af4400e9b04312d1"
+  },
+  "title": "Dynasty Nerds",
+  "text": "Dynasty Nerds",
+  "feedUrl": "https://www.dynastynerds.com/feed/",
+  "feedLogo": "images/logos/DynastyNerds.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632e22a5af4400e9b04312c6"
+  },
+  "title": "FOX",
+  "text": "FOX",
+  "feedUrl": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/nfl",
+  "feedLogo": "https://b.fssta.com/uploads/application/fscom/fox-sports-logo-black.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "632e22a5af4400e9b04312c8"
+  },
+  "title": "Youtube",
+  "text": "Youtube",
+  "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCK4vtDxY3_2Bm5H6VQsuNTA",
+  "feedLogo": "images/logos/youtube.png",
+  "__v": 0
+}]

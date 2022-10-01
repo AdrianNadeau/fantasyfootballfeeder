@@ -28,7 +28,7 @@ router.get('/home', async (req, res) => {
   console.log("***************************** GET HOME **************************");
   try {
     const feeds = await Feed.find()
-
+    console.log(feeds);
     res.render('home', {title: 'Picks', feeds})
   } catch (error) {
     console.log(error.message)
