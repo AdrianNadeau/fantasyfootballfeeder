@@ -6,6 +6,8 @@
  <%- include('partials/head'); %>
  <!--END HEAD -->
    </head>
+ 
+         
    <body class="game_info" data-spy="scroll" data-target=".header">
       
       <!-- LOADER -->
@@ -50,15 +52,35 @@
          <div class="inner-information-text">
             <div class="container">
                <h3>Fantasy News - All Feeds</h3>
-               
+                
+       
             </div>
          </div><br/>
          
       </section>
+      
       <section id="contant" class="contant main-heading team">
+         
          <div class="row">
             <div class="container">
                
+               <div class="row">
+                  <div class="col-md-12 text-center">
+                     <% if (feeds.length > 0) { %>
+                                       
+                        <% feeds.forEach(f => {%>
+                           <!-- <a href="/viewall/<%= f._id %>" onclick= menuTItlemenutitle<%= f._id %>"><%= f.title %></a> -->
+                           <!-- <a href="#" id = "menuTitle_<%= f.id %>"><%= f.title %></a> -->
+                           <a href="#" onclick="getTitleElement('<%= f.id %>')" id ="menuTitle"><%= f.title %></a>
+                           
+                     <% }) %>
+                     <% }else { %>
+                        <!-- blank -->
+                        <p></p>
+                     <% } %>
+                   
+                  </div>
+               </div>
                <div class="col-md-12">
                   
                   <div class="feature-post small-blog">
@@ -67,6 +89,12 @@
                            <img src="images/post2.png" class="img-responsive" alt="#" />
                         </div>
                      </div> -->
+                     
+                     <div class="col-md-12">
+                        
+                           
+                     </div>
+                     
                      <div class="col-md-12">
                         <div class="feature-cont">
                            
@@ -141,10 +169,16 @@
             <!--START FOOTER -->
   <%- include('partials/footer'); %>
   <!--END FOOTER -->
+  
    </body>
    <script>
-   $(function() {
-      // Handler for .ready() called.
-    });
+function getTitleElement(feedId){
+   // set focus to div
+   feedId="#"+feedId;
+   
+   alert("set focus to: "+feedId)
+   $(feedId).focus();
+   
+}
    </script>
 </html>
