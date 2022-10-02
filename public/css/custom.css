@@ -1103,7 +1103,7 @@ section#contant h4 {
     text-align: center;
     margin: 0;
     padding: 0 0 10px;
-    font-size: 18px;
+    font-size: 90%;
     color:#d8302f 
 }
  section#contant p.title {
@@ -2054,7 +2054,7 @@ NEW CLASSES BY SIRIUS CODZ
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     height: 80px;
     border-bottom: 1px solid #222;
 }
