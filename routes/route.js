@@ -27,7 +27,7 @@ router.get('/', function(req, res, next) {
 router.get('/home', async (req, res) => {
   
   try {
-    const feeds = await Feed.find()
+    const feeds = await Feed.find().sort({ displayCount : 1})
     
     res.render('home', {title: 'Picks', feeds})
   } catch (error) {
@@ -47,7 +47,7 @@ router.get('/getfeeds/:id/', async (req, res) => {
 
     const feedRSS = await parser.parseURL(feed.feedUrl)
 
-    const feedLimited = feedRSS.items.slice(0, 5)
+    const feedLimited = feedRSS.items.slice(0, 3)
 
     res.send(feedLimited)
 

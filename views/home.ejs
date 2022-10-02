@@ -69,9 +69,8 @@
                      <% if (feeds.length > 0) { %>
                                        
                         <% feeds.forEach(f => {%>
-                           <!-- <a href="/viewall/<%= f._id %>" onclick= menuTItlemenutitle<%= f._id %>"><%= f.title %></a> -->
-                           <!-- <a href="#" id = "menuTitle_<%= f.id %>"><%= f.title %></a> -->
-                           <a href="#" onclick="getTitleElement('<%= f.id %>')" id ="menuTitle"><%= f.title %></a>
+                          
+                           <a href="#title-<%= f._id %>" id ="menuTitle-<%= f.id %>"><%= f.title %></a>&nbsp;&nbsp;
                            
                      <% }) %>
                      <% }else { %>
@@ -106,7 +105,7 @@
                                     <div class="post-info">
                                    
                                     <div class="post-header">
-                                       <h4 class="post-header-title" > <%= f.title %></h4>
+                                       <h4 class="post-header-title" id="title-<%= f._id %>"> <%= f.title %></h4>
 
                                        <a href="/viewall/<%= f._id %>/"><button type="button" class="btn btn-success">Read All</button></a>
                                     </div>
@@ -114,7 +113,7 @@
                                     
                                     
                                     <div class="feeds" id = "<%= f._id %>"></div>
-                                       <br/></br>
+                                      
                                        <script>
                                           $.ajax({
                                              method: "GET",
@@ -171,12 +170,22 @@
   <!--END FOOTER -->
   
    </body>
-   <script>
-function getTitleElement(feedId){
-   // set focus to div
-   feedId="#"+feedId;
-   $(feedId).focus();
+
+<script>
+   function slideToFeed(feedId){
+      
+      feedId="#"+feedId;
+      let originalFeedId = feedId;
+      // alert("slide to: "+originalFeedId)
+      //get  element with feed id
+      // $( "li" ).get( 0 )
+      alert (originalFeedId);
+      $(feedId).feedITslideDown()
+      
+      
+      // alert($#feedId)
+   }
+
+</script>
    
-}
-   </script>
 </html>

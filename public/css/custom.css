@@ -2068,7 +2068,7 @@ NEW CLASSES BY SIRIUS CODZ
 .feeds {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    /* gap: 1rem; */
 }
 
 .feeds > .post {

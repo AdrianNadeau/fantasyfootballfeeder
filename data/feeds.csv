@@ -1,7 +1,15 @@
-https://rss2.feedspot.com/https://www.rotowire.com/football/articles.php,ROTOWIRE,https://content.rotowire.com/images/rotowire-site-logo.svg,1
-https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/nfl,FOX,https://b.fssta.com/uploads/application/fscom/fox-sports-logo-black.png,2
-https://www.espn.com/espn/rss/nfl/news?null,ESPN,https://a.espncdn.com/i/espn/teamlogos/lrg/trans/espn_dotcom_black.gif,3
-https://www.youtube.com/feeds/videos.xml?channel_id=UCK4vtDxY3_2Bm5H6VQsuNTA,Youtube,images/logos/youtube.png,4
-https://www.fantasysp.com/rss/all/fantasysp/,Fantasy SP,images/logos/fantasySP.png,5
-https://dynastyleaguefootball.com/feed/,Dynasty,images/logos/Dynasty.png,6
-https://www.dynastynerds.com/feed/,Dynasty Nerds,images/logos/DynastyNerds.png,7
+https://fantasyfootballanalytics.net/feed,Fantasy Football Analytics,images/logos/youtube.png,0
+https://www.fftoday.com/rss/news.xml,FFToday,images/logos/youtube.png,1
+https://www.fantasysp.com/rss/all/fantasysp/,Fantasy SP,images/logos/fantasySP.png,2
+https://rss2.feedspot.com/https://www.rotowire.com/football/articles.php,ROTOWIRE,https://content.rotowire.com/images/rotowire-site-logo.svg,6
+https://www.espn.com/espn/rss/nfl/news?null,ESPN,https://a.espncdn.com/i/espn/teamlogos/lrg/trans/espn_dotcom_black.gif,7
+https://dynastyleaguefootball.com/feed/,Dynasty,images/logos/Dynasty.png,8
+https://www.dynastynerds.com/feed/,Dynasty Nerds,images/logos/DynastyNerds.png,4
+https://anchor.fm/s/25cb1c84/podcast/rss,PFF Fantasy Podcast,images/logos/youtube.png,5
+https://www.cbssports.com/rss/headlines/nfl/,CBS,images/logos/youtube.png,6
+https://anchor.fm/s/92a2415c/podcast/rss,FantasyPros,images/logos/youtube.png,8
+https://football.razzball.com/feed,Razzball Fantasy,images/logos/youtube.png,9
+https://dynastyleaguefootball.com/feed/,Dynasty League,images/logos/youtube.png,10
+https://thefantasyfootballers.libsyn.com/fantasyfootball,Fantasy Footballers,images/logos/youtube.png,12
+https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/nfl,FOX,https://b.fssta.com/uploads/application/fscom/fox-sports-logo-black.png,13
+https://www.youtube.com/feeds/videos.xml?channel_id=UCK4vtDxY3_2Bm5H6VQsuNTA,Youtube,images/logos/youtube.png,14
