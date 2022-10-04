@@ -20,6 +20,11 @@ router.get('/', function(req, res, next) {
   
     res.render('index');
 });
+/* Terms. */
+router.get('/terms', function(req, res, next) {
+  
+  res.render('terms');
+});
 /* GET feeds page. */
 
 

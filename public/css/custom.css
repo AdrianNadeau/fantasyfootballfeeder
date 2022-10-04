@@ -1103,7 +1103,7 @@ section#contant h4 {
     text-align: center;
     margin: 0;
     padding: 0 0 10px;
-    font-size: 90%;
+    /* font-size: 90%; */
     color:#d8302f 
 }
  section#contant p.title {
