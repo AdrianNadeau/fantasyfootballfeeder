@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- Basic -->
+   <head>
+ <!--START HEAD -->
+ <%- include('partials/head'); %>
+ <!--END HEAD -->
+   </head>
+ 
+         
+   <body class="game_info" data-spy="scroll" data-target=".header">
+      
+      <!-- LOADER -->
+      <!-- <div id="preloader">
+         <img class="preloader" src="images/loading-img.gif" alt="">
+      </div> -->
+      <!-- END LOADER -->
+      <section id="top">
+         <header>
+            <div class="container">
+               <div class="header-top">
+                  
+                  <!-- <div class="row">
+                     <div class="col-md-6">
+                        <div class="full">
+                           <div class="logo">
+                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="right_top_section">
+                           
+                           <ul class="login">
+                              <li class="login-modal">
+                                 <a href="/" class="login"><i class="fa fa-user"></i>Logout</a>
+                              </li>
+                              
+                           </ul>
+                           
+                        </div>
+                     </div>
+                  </div>-->
+               </div>
+               
+            </div>
+         </header>
+         <div class="inner-page-banner">
+            <div class="container">
+            </div>
+         </div>
+         <div class="inner-information-text">
+            <div class="container">
+               <h3>Twitter Experts</h3>
+                
+       
+            </div>
+         </div><br/>
+         
+      </section>
+      
+      <section id="contant" class="contant main-heading team">
+         
+         <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <!-- <a class="twitter-timeline" data-lang="en" data-dnt="true" data-tweet-limit="3" href="https://twitter.com/AdliveTech">Tweets by AdliveTech</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                       <% if (feeds.length > 0) { %>
+                                         
+                          <% feeds.forEach(f => {%>
+                            
+                             <a href="#twitter-<%= f._id %>" id ="menuTitle-<%= f.id %>" style="text-decoration: underline !important;"><%= f.title %></a>&nbsp;&nbsp;
+                             
+                       <% }) %>&nbsp;<a style="text-decoration: underline !important;" href="https://twitter.com/search?q=nfl%20fantasy&src=typed_query" target="_blank">Find More...</a>
+                       <% }else { %>
+                          <!-- blank -->
+                          <p></p>
+                       <% } %>
+                
+                    </div>
+                </div>
+               <div class="col-md-12">
+                  
+                  <div class="feature-post small-blog">
+                     <!-- <div class="col-md-5">
+                        <div class="feature-img">
+                           <img src="images/post2.png" class="img-responsive" alt="#" />
+                        </div>
+                     </div> -->
+                     
+                     <div class="col-md-12">
+                        
+                           
+                     </div>
+                     
+                     <div class="col-md-12">
+                        <div class="feature-cont">
+                           
+                              
+                              <% if (feeds.length > 0) { %>
+                                 
+                                 <% feeds.forEach(f => {%>
+                                    
+                                    <div class="post-info" id="twitter-<%= f._id %>">
+                                        <a class="twitter-timeline" href="<%= f.feedUrl%>">Loading...</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                    </div>
+                                 <% }) %>
+                                 <% }else { %>
+                                       <p>There are no articles available today...</p>
+                                 <% } %>
+                              
+                              
+                           
+                           
+                        </div>
+                     </div>
+                  </div>
+                 
+               </div>
+            </div>
+         </div>
+         
+      </section>
+            <!--START FOOTER -->
+  <%- include('partials/footer'); %>
+  <!--END FOOTER -->
+  
+   </body>
+
+
+   
+</html>

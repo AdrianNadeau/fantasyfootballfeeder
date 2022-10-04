@@ -302,10 +302,10 @@
 }
  .navbar.navbar-inverse ul.nav.navbar-nav li a {
      float: left;
-     padding: 28px 18px 26px;
+     /* padding: 28px 18px 26px; */
      color: #222;
-     font-weight: 500;
-     font-size: 16px;
+     /* font-weight: 500; */
+     font-size: 14px;
 }
  .main-menu-section .navbar.navbar-inverse .navbar-collapse ul.nav.navbar-nav li ul li a {
     border:none;

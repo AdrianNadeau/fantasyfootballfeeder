@@ -7,6 +7,7 @@ const feedSchema = new Schema({
   feedUrl: { type: String},
   feedLogo: { type: String},
   displayCount: { type: Number},
+  feedType: { type: String},
   
 })
   

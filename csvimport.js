@@ -15,13 +15,14 @@ mongoose
 fs.createReadStream(`${__dirname}/data/feeds.csv`)
   .pipe(parse({ delimiter: ",", from_line: 1 }))
   .on("data", async function (row) {
-    
+    console.log(row[4])
     const feed = new Feed({
         title : row[1],
         text: row[1],
         feedUrl: row[0],
         feedLogo: row[2],
-        displayCount: row[3]
+        displayCount: row[3],
+        feedType: row[4]
     })
 
     await feed.save()

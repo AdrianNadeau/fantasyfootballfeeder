@@ -26,15 +26,23 @@ router.get('/terms', function(req, res, next) {
   res.render('terms');
 });
 /* GET feeds page. */
-
-
-
 router.get('/home', async (req, res) => {
   
   try {
-    const feeds = await Feed.find().sort({ displayCount : 1})
+    const feeds = await Feed.find({feedType:'E'}).sort({ displayCount : 1})
     
-    res.render('home', {title: 'Picks', feeds})
+    res.render('home', {title: 'Experts News', feeds})
+  } catch (error) {
+    console.log(error.message)
+  }
+});
+/* GET twitter page. */
+router.get('/twitter', async (req, res) => {
+  
+  try {
+    const feeds = await Feed.find({feedType:'T'}).sort({ displayCount : 1})
+    
+    res.render('hometwitter', {title: 'Twitter Experts', feeds})
   } catch (error) {
     console.log(error.message)
   }
