@@ -38,15 +38,22 @@ router.get('/home', async (req, res) => {
 });
 /* GET twitter page. */
 router.get('/twitter/:id', async (req, res) => {
-  
+  console.log("t id: "+req.params.id);
   try {
     const feeds = await Feed.find({feedType:'T'}).sort({ displayCount : 1})
-    let feed = await Feed.findById(req.params.id)
     
-    // let firstFeedId = feeds[0];
-    // let twitterUser =feed.title;
-    // res.render('hometwitter', {title: twitterUser + feeds, feed })\
-
+    let feed = await Feed.findById(req.params.id)
+    // const feed = await Feed.find({title:'Adam Schefter'});//(req.params.id
+    console.log("Feeds "+feed);
+    if(feed==null){
+      //get shefners
+      console.log("Feed is null");
+      feed = await Feed.find({title:'Adam Schefter'});
+      console.log("Feed is shef: "+feed);
+      
+    }
+    console.log("feeds: "+feeds);
+    console.log("feed: "+feed);
     res.render('hometwitter', {feeds, feed })
   } catch (error) {
     console.log(error.message)
