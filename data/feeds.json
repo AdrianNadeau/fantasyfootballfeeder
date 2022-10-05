@@ -1,6 +1,6 @@
 [{
   "_id": {
-    "$oid": "633c78d14e8dd58aed890091"
+    "$oid": "633dabfecafb00b6f41cc827"
   },
   "title": "Fantasy Football Analytics",
   "text": "Fantasy Football Analytics",
@@ -11,117 +11,7 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "633c78d14e8dd58aed890096"
-  },
-  "title": "Dynasty",
-  "text": "Dynasty",
-  "feedUrl": "https://dynastyleaguefootball.com/feed/",
-  "feedLogo": "images/logos/Dynasty.png",
-  "displayCount": 8,
-  "feedType": "E",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed890097"
-  },
-  "title": "Dynasty Nerds",
-  "text": "Dynasty Nerds",
-  "feedUrl": "https://www.dynastynerds.com/feed/",
-  "feedLogo": "images/logos/DynastyNerds.png",
-  "displayCount": 30,
-  "feedType": "E",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed89009d"
-  },
-  "title": "Fantasy Footballers",
-  "text": "Fantasy Footballers",
-  "feedUrl": "https://thefantasyfootballers.libsyn.com/fantasyfootball",
-  "feedLogo": "images/logos/youtube.png",
-  "displayCount": 4,
-  "feedType": "E",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed8900a2"
-  },
-  "title": "Greg Cosell",
-  "text": "Greg Cosell",
-  "feedUrl": "https://twitter.com/gregcosell?ref_src=twsrc%5Etfw",
-  "feedLogo": "none",
-  "displayCount": 4,
-  "feedType": "T",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed890093"
-  },
-  "title": "Fantasy SP",
-  "text": "Fantasy SP",
-  "feedUrl": "https://www.fantasysp.com/rss/all/fantasysp/",
-  "feedLogo": "images/logos/fantasySP.png",
-  "displayCount": 3,
-  "feedType": "E",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed8900b7"
-  },
-  "title": "Peter King",
-  "text": "Peter King",
-  "feedUrl": "https://twitter.com/SI_PeterKing",
-  "feedLogo": "none",
-  "displayCount": 6,
-  "feedType": "T",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed89009b"
-  },
-  "title": "Razzball Fantasy",
-  "text": "Razzball Fantasy",
-  "feedUrl": "https://football.razzball.com/feed",
-  "feedLogo": "images/logos/youtube.png",
-  "displayCount": 9,
-  "feedType": "E",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed890099"
-  },
-  "title": "CBS",
-  "text": "CBS",
-  "feedUrl": "https://www.cbssports.com/rss/headlines/nfl/",
-  "feedLogo": "images/logos/youtube.png",
-  "displayCount": 1,
-  "feedType": "E",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed890092"
-  },
-  "title": "FFToday",
-  "text": "FFToday",
-  "feedUrl": "https://www.fftoday.com/rss/news.xml",
-  "feedLogo": "images/logos/youtube.png",
-  "displayCount": 31,
-  "feedType": "E",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed89009c"
-  },
-  "title": "Dynasty League",
-  "text": "Dynasty League",
-  "feedUrl": "https://dynastyleaguefootball.com/feed/",
-  "feedLogo": "images/logos/youtube.png",
-  "displayCount": 10,
-  "feedType": "E",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed890094"
+    "$oid": "633dabfecafb00b6f41cc82a"
   },
   "title": "ROTOWIRE",
   "text": "ROTOWIRE",
@@ -132,29 +22,7 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "633c78d14e8dd58aed8900a0"
-  },
-  "title": "Ian Rapoport",
-  "text": "Ian Rapoport",
-  "feedUrl": "https://twitter.com/RapSheet?ref_src=twsrc%5Etfw",
-  "feedLogo": "none",
-  "displayCount": 2,
-  "feedType": "T",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed89009f"
-  },
-  "title": "Adam Schefter",
-  "text": "Adam Schefter",
-  "feedUrl": "https://twitter.com/AdamSchefter?ref_src=twsrc%5Etfw",
-  "feedLogo": "none",
-  "displayCount": 1,
-  "feedType": "T",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "633c78d14e8dd58aed890095"
+    "$oid": "633dabfecafb00b6f41cc82b"
   },
   "title": "ESPN",
   "text": "ESPN",
@@ -165,7 +33,29 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "633c78d14e8dd58aed890098"
+    "$oid": "633dabfecafb00b6f41cc82c"
+  },
+  "title": "Dynasty",
+  "text": "Dynasty",
+  "feedUrl": "https://dynastyleaguefootball.com/feed/",
+  "feedLogo": "images/logos/Dynasty.png",
+  "displayCount": 8,
+  "feedType": "E",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc82d"
+  },
+  "title": "Dynasty Nerds",
+  "text": "Dynasty Nerds",
+  "feedUrl": "https://www.dynastynerds.com/feed/",
+  "feedLogo": "images/logos/DynastyNerds.png",
+  "displayCount": 30,
+  "feedType": "E",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc82e"
   },
   "title": "PFF Fantasy Podcast",
   "text": "PFF Fantasy Podcast",
@@ -176,18 +66,62 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "633c78d14e8dd58aed89009a"
+    "$oid": "633dabfecafb00b6f41cc829"
   },
-  "title": "FantasyPros",
-  "text": "FantasyPros",
-  "feedUrl": "https://anchor.fm/s/92a2415c/podcast/rss",
-  "feedLogo": "images/logos/youtube.png",
-  "displayCount": 8,
+  "title": "Fantasy SP",
+  "text": "Fantasy SP",
+  "feedUrl": "https://www.fantasysp.com/rss/all/fantasysp/",
+  "feedLogo": "images/logos/fantasySP.png",
+  "displayCount": 3,
   "feedType": "E",
   "__v": 0
 },{
   "_id": {
-    "$oid": "633c78d14e8dd58aed89009e"
+    "$oid": "633dabfecafb00b6f41cc828"
+  },
+  "title": "FFToday",
+  "text": "FFToday",
+  "feedUrl": "https://www.fftoday.com/rss/news.xml",
+  "feedLogo": "images/logos/youtube.png",
+  "displayCount": 31,
+  "feedType": "E",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc831"
+  },
+  "title": "Razzball Fantasy",
+  "text": "Razzball Fantasy",
+  "feedUrl": "https://football.razzball.com/feed",
+  "feedLogo": "images/logos/youtube.png",
+  "displayCount": 9,
+  "feedType": "E",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc832"
+  },
+  "title": "Dynasty League",
+  "text": "Dynasty League",
+  "feedUrl": "https://dynastyleaguefootball.com/feed/",
+  "feedLogo": "images/logos/youtube.png",
+  "displayCount": 10,
+  "feedType": "E",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc833"
+  },
+  "title": "Fantasy Footballers",
+  "text": "Fantasy Footballers",
+  "feedUrl": "https://thefantasyfootballers.libsyn.com/fantasyfootball",
+  "feedLogo": "images/logos/youtube.png",
+  "displayCount": 4,
+  "feedType": "E",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc834"
   },
   "title": "FOX",
   "text": "FOX",
@@ -198,24 +132,90 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "633c78d14e8dd58aed8900a1"
+    "$oid": "633dabfecafb00b6f41cc835"
+  },
+  "title": "Adam Schefter",
+  "text": "Adam Schefter",
+  "feedUrl": "https://twitter.com/AdamSchefter",
+  "feedLogo": "none",
+  "displayCount": 1,
+  "feedType": "T",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc836"
+  },
+  "title": "Ian Rapoport",
+  "text": "Ian Rapoport",
+  "feedUrl": "https://twitter.com/RapSheet",
+  "feedLogo": "none",
+  "displayCount": 2,
+  "feedType": "T",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc837"
   },
   "title": "NFL ON FOX",
   "text": "NFL ON FOX",
-  "feedUrl": "https://twitter.com/NFLonFOX?ref_src=twsrc%5Etfw",
+  "feedUrl": "https://twitter.com/NFLonFOX",
   "feedLogo": "none",
   "displayCount": 3,
   "feedType": "T",
   "__v": 0
 },{
   "_id": {
-    "$oid": "633c78d14e8dd58aed8900a3"
+    "$oid": "633dabfecafb00b6f41cc838"
+  },
+  "title": "Greg Cosell",
+  "text": "Greg Cosell",
+  "feedUrl": "https://twitter.com/gregcosell",
+  "feedLogo": "none",
+  "displayCount": 4,
+  "feedType": "T",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc839"
   },
   "title": "Pete Prisco",
   "text": "Pete Prisco",
-  "feedUrl": "https://twitter.com/PriscoCBS?ref_src=twsrc%5Etfw",
+  "feedUrl": "https://twitter.com/PriscoCBS",
   "feedLogo": "none",
   "displayCount": 5,
   "feedType": "T",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc84d"
+  },
+  "title": "Peter King",
+  "text": "Peter King",
+  "feedUrl": "https://twitter.com/SI_PeterKing",
+  "feedLogo": "none",
+  "displayCount": 6,
+  "feedType": "T",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc82f"
+  },
+  "title": "CBS",
+  "text": "CBS",
+  "feedUrl": "https://www.cbssports.com/rss/headlines/nfl/",
+  "feedLogo": "images/logos/youtube.png",
+  "displayCount": 1,
+  "feedType": "E",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633dabfecafb00b6f41cc830"
+  },
+  "title": "FantasyPros",
+  "text": "FantasyPros",
+  "feedUrl": "https://anchor.fm/s/92a2415c/podcast/rss",
+  "feedLogo": "images/logos/youtube.png",
+  "displayCount": 8,
+  "feedType": "E",
   "__v": 0
 }]
