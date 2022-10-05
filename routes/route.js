@@ -37,12 +37,17 @@ router.get('/home', async (req, res) => {
   }
 });
 /* GET twitter page. */
-router.get('/twitter', async (req, res) => {
+router.get('/twitter/:id', async (req, res) => {
   
   try {
     const feeds = await Feed.find({feedType:'T'}).sort({ displayCount : 1})
+    let feed = await Feed.findById(req.params.id)
     
-    res.render('hometwitter', {title: 'Twitter Experts', feeds})
+    // let firstFeedId = feeds[0];
+    // let twitterUser =feed.title;
+    // res.render('hometwitter', {title: twitterUser + feeds, feed })\
+
+    res.render('hometwitter', {feeds, feed })
   } catch (error) {
     console.log(error.message)
   }
@@ -113,6 +118,30 @@ router.get('/viewall/:id/', async (req, res) => {
   }
      
  })
- 
 
+// VIEW ALL TWEETS FOR A FEED
+router.get('/twitterfeed/:id/', async (req, res) => {
+  console.log("get twitter url")
+  try {
+    let feedId = req.params.id;
+    let feed = await Feed.findById(req.params.id)
+
+    if(!feed) {
+      res.status(404).send(`No feeds for ${req.params.id}`)
+      return
+    }
+
+    let feedTitle= feed.title;
+    console.log("feedTitle :"+feedTitle);
+    
+    res.render('hometwitter', {feedId, feedTitle})
+
+
+  } catch (error) {
+    res.status(500).send(error.message)
+  }
+  
+ })
+
+ 
 module.exports = router;
