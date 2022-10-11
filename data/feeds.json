@@ -13,8 +13,8 @@
   "_id": {
     "$oid": "633dc90661e7d6db19ede15a"
   },
-  "title": "ROTOWIRE",
-  "text": "ROTOWIRE",
+  "title": "ROTOWIRE ($ service)",
+  "text": "ROTOWIRE  ($ service)",
   "feedUrl": "https://rss2.feedspot.com/https://www.rotowire.com/football/articles.php",
   "feedLogo": "https://content.rotowire.com/images/rotowire-site-logo.svg",
   "displayCount": 6,
@@ -28,7 +28,7 @@
   "text": "ESPN",
   "feedUrl": "https://www.espn.com/espn/rss/nfl/news?null",
   "feedLogo": "https://a.espncdn.com/i/espn/teamlogos/lrg/trans/espn_dotcom_black.gif",
-  "displayCount": 0,
+  "displayCount": 1,
   "feedType": "E",
   "__v": 0
 },{
@@ -138,7 +138,7 @@
   "text": "Adam Schefter",
   "feedUrl": "https://twitter.com/AdamSchefter",
   "feedLogo": "none",
-  "displayCount": 1,
+  "displayCount": 0,
   "feedType": "T",
   "__v": 0
 },{
@@ -149,7 +149,7 @@
   "text": "Ian Rapoport",
   "feedUrl": "https://twitter.com/RapSheet",
   "feedLogo": "none",
-  "displayCount": 2,
+  "displayCount": 1,
   "feedType": "T",
   "__v": 0
 },{
@@ -160,7 +160,7 @@
   "text": "NFL ON FOX",
   "feedUrl": "https://twitter.com/NFLonFOX",
   "feedLogo": "none",
-  "displayCount": 3,
+  "displayCount": 10,
   "feedType": "T",
   "__v": 0
 },{
@@ -182,7 +182,7 @@
   "text": "Pete Prisco",
   "feedUrl": "https://twitter.com/PriscoCBS",
   "feedLogo": "none",
-  "displayCount": 5,
+  "displayCount": 3,
   "feedType": "T",
   "__v": 0
 },{
@@ -193,7 +193,7 @@
   "text": "Peter King",
   "feedUrl": "https://twitter.com/SI_PeterKing",
   "feedLogo": "none",
-  "displayCount": 6,
+  "displayCount": 5,
   "feedType": "T",
   "__v": 0
 },{
@@ -204,7 +204,7 @@
   "text": "NFL.COM",
   "feedUrl": "https://rss2.feedspot.com/https://www.nfl.com/news/?context=3977566279",
   "feedLogo": "none",
-  "displayCount": 2,
+  "displayCount": 0,
   "feedType": "E",
   "__v": 0
 },{

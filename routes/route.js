@@ -52,8 +52,7 @@ router.get('/twitter/:id', async (req, res) => {
       console.log("Feed is shef: "+feed);
       
     }
-    console.log("feeds: "+feeds);
-    console.log("feed: "+feed);
+  
     res.render('hometwitter', {feeds, feed })
   } catch (error) {
     console.log(error.message)
