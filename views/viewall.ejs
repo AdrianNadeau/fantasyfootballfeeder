@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- Basic -->
+   <head>
+ <!--START HEAD -->
+ <%- include('partials/head'); %>
+ <!--END HEAD -->
+   </head>
+   <body class="game_info" data-spy="scroll" data-target=".header">
+      <!-- LOADER -->
+      <!-- <div id="preloader">
+         <img class="preloader" src="images/loading-img.gif" alt="">
+      </div> -->
+      <!-- END LOADER -->
+      <section id="top">
+         
+         <div class="inner-page-banner">
+            <div class="container">
+            </div>
+         </div>
+         <div class="inner-information-text">
+            <div class="container">
+               <h3><%=feedTitle%> - News and Tips</h3>
+               
+            </div>
+         </div>
+      </section>
+      <section id="contant" class="contant main-heading team">
+         <div class="row">
+            <div class="container">
+               <div class="col-md-12">
+                  
+                  <div class="feature-post small-blog">
+                     <!-- <div class="col-md-5">
+                        <div class="feature-img">
+                           <img src="images/post2.png" class="img-responsive" alt="#" />
+                        </div>
+                     </div> -->
+                     <div class="col-md-12">
+                        <div class="feature-cont" style=" display: block !important;">
+                           <div class="post-info">
+                                    <div class="feeds" id = "<%= feedId %>" ></div>
+                                       <br/></br>
+                                       <script>
+                                          $.ajax({
+                                             method: "GET",
+                                             url: "/getallfeeds/<%=feedId %>/",
+                                             data: { }
+                                          })
+                                          .done(function( rss ) {
+                                                console.log(rss);
+                                                var currentHTML = $("#<%=feedId %>").val();
+                                                const rssArray = [rss];
+                                                
+                                                rssArray[0]?.forEach(element => {
+                                                   let articleUrl="<div class='post-heading'>"+
+                                                   "</div>"+
+                                                   "<a  target='_blank' href="+element.link+"><h3>"+element.title+"</h3></a>"+
+                                                   "<i>"+element.pubDate.substring(0, element.pubDate.length-6)+"</i>"+
+                                                   "<div class='full'><a  target='_blank' href="+element.link+"<button type='button' class='btn btn-success'>Read More</button></a><br/><br/>";
+                                                   currentHTML+=articleUrl;
+                                                });
+                                                $("#<%=feedId%>").html(currentHTML);
+                                          });
+                                          
+                                       </script>
+                                
+                              
+                              
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </div>
+                 
+               </div>
+            </div>
+         </div>
+      </section>
+         <!--START FOOTER -->
+  <%- include('partials/footer'); %>
+  <!--END FOOTER -->
+   </body>
+   <script>
+   $(function() {
+      // Handler for .ready() called.
+    });
+   </script>
+</html>
