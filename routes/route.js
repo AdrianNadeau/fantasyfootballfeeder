@@ -30,7 +30,7 @@ router.get('/home', async (req, res) => {
   
   try {
     const feeds = await Feed.find({feedType:'E'}).sort({ displayCount : 1})
-    
+    console.log("feeds:",feeds)  
     res.render('home', {title: 'Experts News', feeds})
   } catch (error) {
     console.log(error.message)
