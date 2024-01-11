@@ -1,7 +1,0 @@
-https://forums.thehuddle.com/forum/3-fantasy-football.xml
-https://fantasyfootballanalytics.net/feed
-https://dynastytradecalculator.com/feed/
-https://rss2.feedspot.com/https://www.rotowire.com/football/articles.php
-https://www.youtube.com/feeds/videos.xml?channel_id=UCK4vtDxY3_2Bm5H6VQsuNTA
-https://www.espn.com/espn/rss/nfl/news?null
-https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/nfl

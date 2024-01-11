@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- Basic -->
+   <head>
+ <!--START HEAD -->
+ <%- include('partials/head'); %>
+ <!--END HEAD -->
+   </head>
+   <body class="game_info" data-spy="scroll" data-target=".header">
+      <!-- LOADER -->
+      <!-- <div id="preloader">
+         <img class="preloader" src="images/loading-img.gif" alt="">
+      </div> -->
+      <!-- END LOADER -->
+      <section id="top">
+         
+         <div class="inner-page-banner">
+            <div class="container">
+            </div>
+         </div>
+         <div class="inner-information-text">
+            <div class="container">
+               <h3><span id = "name"><%=feed.title%></span> News & Tips</h3>
+               
+            </div>
+         </div>
+      </section>
+      <section id="contant" class="contant main-heading team">
+         <div class="row">
+            <div class="container">
+               <div class="col-md-12">
+                  
+                  <div class="feature-post small-blog">
+                     <!-- <div class="col-md-5">
+                        <div class="feature-img">
+                           <img src="images/post2.png" class="img-responsive" alt="#" />
+                        </div>
+                     </div> -->
+                     <div class="col-md-12 text-center">
+                        <ul class="nav nav-tabs text-center">
+                            <li><a href="/" >Home</a>
+                            <% if (feeds.length > 0) { %>
+                                           
+                               <% feeds.forEach(f => {%>
+                                  <li><a href="/twitter/<%= f.id %>" ><%= f.title %></a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+                                 
+                                  
+                            <% }) %>
+                            <% }else { %>
+                               
+                               <p></p>
+                            <% } %>
+                           
+                          </ul>
+                      
+                    </div>
+                     <div class="col-md-12">
+                        
+                            <br/>
+                            <br/>
+                            
+                           
+                                <a class="twitter-timeline" href="<%=feed.feedUrl%>"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            
+                            
+                          
+                              
+                           
+                           
+                        </div>
+                     
+                     </div>
+                  </div>
+                 
+               </div>
+            </div>
+         </div>
+      </section>
+         <!--START FOOTER -->
+  <%- include('partials/footer'); %>
+  <!--END FOOTER -->
+   </body>
+   <!-- <script>
+    function loadTimeline(feedId){
+        
+        //get feedId and load approprite widget by url
+    
+        $.ajax({
+            method: "GET",
+            url: "/getTwitterFeed/"+feedId,
+            data: { }
+        })
+        .done(function( data ) {
+           
+            //refresh widget here
+            $("#twitter-timeline").attr("href", data); 
+
+            
+        });
+     
+    
+}
+</script> -->
+</html>

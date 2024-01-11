@@ -6,7 +6,10 @@
  <%- include('partials/head'); %>
  <!--END HEAD -->
    </head>
+ 
+         
    <body class="game_info" data-spy="scroll" data-target=".header">
+      
       <!-- LOADER -->
       <!-- <div id="preloader">
          <img class="preloader" src="images/loading-img.gif" alt="">
@@ -16,13 +19,14 @@
          <header>
             <div class="container">
                <div class="header-top">
-                  <div class="row">
+                  
+                  <!-- <div class="row">
                      <div class="col-md-6">
-                        <!-- <div class="full">
+                        <div class="full">
                            <div class="logo">
                               <a href="index.html"><img src="images/logo.png" alt="#" /></a>
                            </div>
-                        </div> -->
+                        </div>
                      </div>
                      <div class="col-md-6">
                         <div class="right_top_section">
@@ -33,10 +37,10 @@
                               </li>
                               
                            </ul>
-                           <!-- end button section -->
+                           
                         </div>
                      </div>
-                  </div>
+                  </div>-->
                </div>
                
             </div>
@@ -47,349 +51,140 @@
          </div>
          <div class="inner-information-text">
             <div class="container">
-               <h3>Fantasy News</h3>
-               
+               <h3>Fantasy News - All Feeds</h3>
+                
+       
             </div>
-         </div>
+         </div><br/>
+         
       </section>
+      
       <section id="contant" class="contant main-heading team">
+         
          <div class="row">
             <div class="container">
-               <div class="col-md-12">
-                  <div class="feature-post">
-                     <div class="feature-img">
-                        <img src="images/news-header.jpeg" class="img-responsive" alt="#" />
-                     </div>
-                     <div class="feature-cont">
-                        <div class="post-people">
+               
+               <div class="row">
+                  <div class="col-md-12 text-center">
+                     <ul class="nav nav-tabs text-center">
+                        <li class="active"><a href="/">Home</a></li>
+                        <% if (feeds.length > 0) { %>
+                                       
+                           <% feeds.forEach(f => {%>
+                              <li><a href="#title-<%= f._id %>" id ="menuTitle-<%= f.id %>"><%= f.title %></a></li>
+                              <!-- <a href="#title-<%= f._id %>" id ="menuTitle-<%= f.id %>" style="text-decoration: underline !important;"><%= f.title %></a>&nbsp;&nbsp; -->
+                              
+                        <% }) %>
+                        <% }else { %>
                            
-                           <div class="left-profile">
-                              <h1>Experts</h1>
-                              <div class="post-info">
-                                 <span>
-                                    <h4>Yahoo NFL</h4>
-                                    <h5>on Sept 30, 2022</h5>
-                                 </span>
-                              </div>
-                              <span class="share"></span>
-                           </div>
-                        </div>
-                        <div class="post-heading">
-                           <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</h3>
-                           <p>World CupInternational Club football teamSpanish LeagueReal Madrid Vs Barcelona SpanishNext MatchThe Match Result 
-                              UpdateWorld CUPFIFA World CUP 2015International Club football teamEngland30 Jun 10:24FranceReal Madrid Vs Barcelona SpanishManchester 
-                              City30 Nov 00:00Manchester.
-                           </p>
-                           <!-- <div class="full">
-                              <a class="btn" href="#">Read More</a>
-                           </div> -->
-                        </div>
-                     </div>
+                           <p></p>
+                        <% } %>
+                       
+                      </ul>
+                     <!-- <% if (feeds.length > 0) { %>
+                                       
+                        <% feeds.forEach(f => {%>
+                          
+                           <a href="#title-<%= f._id %>" id ="menuTitle-<%= f.id %>" style="text-decoration: underline !important;"><%= f.title %></a>&nbsp;&nbsp;
+                           
+                     <% }) %>
+                     <% }else { %>
+                        
+                        <p></p>
+                     <% } %>
+                    -->
                   </div>
+               </div>
+               <div class="col-md-12">
                   
                   <div class="feature-post small-blog">
-                     <div class="col-md-5">
+                     <!-- <div class="col-md-5">
                         <div class="feature-img">
                            <img src="images/post2.png" class="img-responsive" alt="#" />
                         </div>
+                     </div> -->
+                     
+                     <div class="col-md-12">
+                        
+                           
                      </div>
-                     <div class="col-md-7">
+                     
+                     <div class="col-md-12">
                         <div class="feature-cont">
-                           <div class="post-info">
-                              <img src="images/profile-img.png" alt="#" />
-                              <span>
-                                 <h4>by George Kvasnikov</h4>
-                                 <h5>on Jun 27, 2014</h5>
-                              </span>
-                           </div>
-                           <div class="post-heading">
-                              <h3>We denounce with righteous indignation and dislike men who are so beguiled</h3>
-                              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores 
-							   et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est 
-							   laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-                              <div class="full">
-                                 <a class="btn" href="#">Read More</a>
-                              </div>
-                           </div>
+                           
+                              
+                              <% if (feeds.length > 0) { %>
+                                 
+                                 <% feeds.forEach(f => {%>
+                                    
+                                    <div class="post-info">
+                                   
+                                    <div class="post-header">
+                                       <h4 class="post-header-title" id="title-<%= f._id %>"> <%= f.title %></h4>
+
+                                       <a href="/viewall/<%= f._id %>/"><button type="button" class="btn btn-success">Read All</button></a>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <div class="feeds" id = "<%= f._id %>"></div>
+                                      
+                                       <script>
+                                          $.ajax({
+                                             method: "GET",
+                                             url: "/getfeeds/<%= f._id %>/",
+                                             data: { }
+                                          })
+                                          .done(function( rss ) {
+                                             
+                                              var currentHTML = $("#<%= f._id %>").val();
+                                                      
+                                                         rss.forEach(item => {
+                                                            let articleUrl=`<div class="post">
+                                                                     <h3 class="post-title"> ${item.title} </h3>
+                                                                     <span class="post-date"> 
+                                                                        ${item.pubDate.substring(0, item.pubDate.length-7)}
+                                                                     </span>
+                                                                     <a  target="_blank" href="${item.link}"><button type="button" class="btn btn-success">Read More</button></a> </div>`
+                                                            
+                                                            
+
+                                                            currentHTML+=articleUrl;
+                                                         });
+
+                                                         
+                                                         $("#<%= f._id %>").html(currentHTML);
+                                                         
+                                                      
+                                       });
+                                       </script>
+                                          </br>
+                                         
+
+                                       </p>
+                                    </div>
+                                 <% }) %>
+                                 <% }else { %>
+                                       <p>There are no articles available today...</p>
+                                 <% } %>
+                              
+                              
+                           
+                           
                         </div>
                      </div>
                   </div>
-                  <div class="feature-post small-blog">
-                     <div class="col-md-5">
-                        <div class="feature-img">
-                           <img src="images/post2.png" class="img-responsive" alt="#" />
-                        </div>
-                     </div>
-                     <div class="col-md-7">
-                        <div class="feature-cont">
-                           <div class="post-info">
-                              <img src="images/profile-img.png" alt="#" />
-                              <span>
-                                 <h4>by George Kvasnikov</h4>
-                                 <h5>on Jun 27, 2014</h5>
-                              </span>
-                           </div>
-                           <div class="post-heading">
-                              <h3>We denounce with righteous indignation and dislike men who are so beguiled</h3>
-                              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores 
-							   et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est 
-							   laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-                              <div class="full">
-                                 <a class="btn" href="#">Read More</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="feature-post small-blog">
-                     <div class="col-md-5">
-                        <div class="feature-img">
-                           <img src="images/post2.png" class="img-responsive" alt="#" />
-                        </div>
-                     </div>
-                     <div class="col-md-7">
-                        <div class="feature-cont">
-                           <div class="post-info">
-                              <img src="images/profile-img.png" alt="#" />
-                              <span>
-                                 <h4>by George Kvasnikov</h4>
-                                 <h5>on Jun 27, 2014</h5>
-                              </span>
-                           </div>
-                           <div class="post-heading">
-                              <h3>Sydney derby takes centre stage while Tim Cahill says no to A-League</h3>
-                              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores 
-							   et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est 
-							   laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-                              <div class="full">
-                                 <a class="btn" href="#">Read More</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <!-- <div class="blog-sidebar">
-                     <div class="search-bar-blog">
-                        <form>
-                           <input type="text" placeholder="search" />
-                           <button><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </form>
-                     </div>
-                  </div> -->
-                  <div class="blog-sidebar">
-                     <h4 class="heading">Experts</h4>
-                     <div class="category-menu">
-                        <ul>
-                           <li><a href="#">Cricket</a></li>
-                           <li><a href="#">Football</a></li>
-                           <li><a href="#">Hockey</a></li>
-                           <li><a href="#">Tennis</a></li>
-                           <li><a href="#">Basketball</a></li>
-                           <li><a href="#">Golf</a></li>
-                           <li><a href="#">Cycling</a></li>
-                           <li><a href="#">Motorsports</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="blog-sidebar">
-                     <h4 class="heading">Fanantics</h4>
-                     <div class="category-menu">
-                        <ul>
-                           <li><a href="#">Cricket</a></li>
-                           <li><a href="#">Football</a></li>
-                           <li><a href="#">Hockey</a></li>
-                           <li><a href="#">Tennis</a></li>
-                           <li><a href="#">Basketball</a></li>
-                           <li><a href="#">Golf</a></li>
-                           <li><a href="#">Cycling</a></li>
-                           <li><a href="#">Motorsports</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <aside id="sidebar" class="left-bar">
-                     <div class="feature-matchs">
-                        <div class="team-btw-match">
-                           <ul>
-                              <li>
-                                 <img src="images/img-01_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-02.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
-                           <ul>
-                              <li>
-                                 <img src="images/img-03_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-04_003.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
-                           <ul>
-                              <li>
-                                 <img src="images/img-05_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-06.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
-                           <ul>
-                              <li>
-                                 <img src="images/img-07_002.png" alt="">
-                                 <span>Portugal</span>
-                              </li>
-                              <li class="vs"><span>vs</span></li>
-                              <li>
-                                 <img src="images/img-08.png" alt="">
-                                 <span>Germany</span>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </aside>
-                  <aside id="sidebar" class="left-bar">
-                     <div class="banner-sidebar">
-                        <img class="img-responsive" src="images/match-banner1.jpg" alt="#">
-                        <h3>Argentina vs Chile|Goals of the match | COPA </h3>
-                     </div>
-                  </aside>
-                  <aside id="sidebar" class="right-bar">
-                     <div class="banner">
-                        <img class="img-responsive" src="images/adds-3.jpg" alt="#">
-                     </div>
-                  </aside>
-                  <aside id="sidebar" class="left-bar">
-                     <div class="feature-matchs">
-                        <table class="table table-bordered table-hover">
-                           <thead>
-                              <tr>
-                                 <th>#</th>
-                                 <th>Team</th>
-                                 <th>P</th>
-                                 <th>W</th>
-                                 <th>L</th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <td>1</td>
-                                 <td><img src="images/img-01_004.png" alt="">Liverpool</td>
-                                 <td>10</td>
-                                 <td>12</td>
-                                 <td>20</td>
-                              </tr>
-                              <tr>
-                                 <td>2</td>
-                                 <td><img src="images/img-02_002.png" alt="">Chelsea</td>
-                                 <td>10</td>
-                                 <td>12</td>
-                                 <td>20</td>
-                              </tr>
-                              <tr>
-                                 <td>3</td>
-                                 <td><img src="images/img-03_003.png" alt="">Norwich City</td>
-                                 <td>20</td>
-                                 <td>15</td>
-                                 <td>20</td>
-                              </tr>
-                              <tr>
-                                 <td>4</td>
-                                 <td><img src="images/img-04_002.png" alt="">West Brom</td>
-                                 <td>60</td>
-                                 <td>10</td>
-                                 <td>60</td>
-                              </tr>
-                              <tr>
-                                 <td>5</td>
-                                 <td><img src="images/img-05.png" alt="">sunderland</td>
-                                 <td>30</td>
-                                 <td>06</td>
-                                 <td>30</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </aside>
+                 
                </div>
             </div>
          </div>
+         
       </section>
-      <footer id="footer" class="footer">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="full">
-                     <div class="footer-widget">
-                        <div class="footer-logo">
-                           <a href="#"><img src="images/footer-logo.png" alt="#" /></a>
-                        </div>
-                        <p>Most of our events have hard and easy route choices as we are always keen to encourage new riders.</p>
-                        <ul class="social-icons style-4 pull-left">
-                           <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                           <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                           <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
-                           <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-2">
-                  <div class="full">
-                     <div class="footer-widget">
-                        <h3>Menu</h3>
-                        <ul class="footer-menu">
-                           <li><a href="about.html">About Us</a></li>
-                           <li><a href="team.html">Our Team</a></li>
-                           <li><a href="news.html">Latest News</a></li>
-                           <li><a href="matche.html">Recent Matchs</a></li>
-                           <li><a href="blog.html">Our Blog</a></li>
-                           <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div class="full">
-                     <div class="footer-widget">
-                        <h3>Contact us</h3>
-                        <ul class="address-list">
-                           <li><i class="fa fa-map-marker"></i> Lorem Ipsum is simply dummy text of the printing..</li>
-                           <li><i class="fa fa-phone"></i> 123 456 7890</li>
-                           <li><i style="font-size:20px;top:5px;" class="fa fa-envelope"></i> demo@gmail.com</li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div class="full">
-                     <div class="contact-footer">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d120615.72236587871!2d73.07890527988283!3d19.140910987164396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1527759905404" width="600" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="footer-bottom">
-            <div class="container">
-               <p>Copyright © 2018 Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a></p>
-            </div>
-         </div>
-      </footer>
-      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-      <!-- ALL JS FILES -->
-      <script src="js/all.js"></script>
-      <!-- ALL PLUGINS -->
-      <script src="js/custom.js"></script>
+            <!--START FOOTER -->
+  <%- include('partials/footer'); %>
+  <!--END FOOTER -->
+  
    </body>
+
+   
 </html>
